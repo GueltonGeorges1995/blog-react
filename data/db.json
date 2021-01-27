@@ -1,10 +1,22 @@
 {
   "blogs": [
     {
-      "title": "zadadaz",
-      "body": "azdazszsa",
+      "title": "dazdada",
+      "body": "azdadad",
       "author": "mario",
       "id": 1
+    },
+    {
+      "title": "azdad",
+      "body": "azdzadzadazda",
+      "author": "mario",
+      "id": 2
+    },
+    {
+      "title": "test",
+      "body": "test",
+      "author": "mario",
+      "id": 3
     }
   ]
 }

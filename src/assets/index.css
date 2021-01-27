@@ -9,7 +9,7 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     border-bottom: 1px solid #f2f2f2;
 }
@@ -97,4 +97,10 @@
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+}
+.create form {
+    margin-top: 20px;
+}
+.create p {
+    margin-top: 20px;
 }
