@@ -10,6 +10,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const { login } = useAuth();
     const history = useHistory();
+    const [showPasswordInput, setShowPasswordInput] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,9 +35,13 @@ const Login = () => {
             {error && <p> {error} </p>}
             <form onSubmit={handleSubmit}>
                 <label >Email</label>
-                <input type="email" onChange={(e)=>setInputEmailValue(e.target.value)} />
+                <input type="email" onChange={(e)=>setInputEmailValue(e.target.value)}  />
                 <label >Password</label>
-                <input type="password" onChange={(e)=>setInputPasswordValue(e.target.value)} />
+                <div>
+                    <input type={showPasswordInput ? "text" : "password"} onChange={(e)=>setInputPasswordValue(e.target.value)}  />
+                    
+                </div>
+               
                 <button disabled={loading}>Log In</button>
             </form>
             <p>Need an account ? <Link to="/signup">Sign Up</Link></p>

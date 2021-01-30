@@ -104,3 +104,13 @@
 .create p {
     margin-top: 20px;
 }
+
+/* Dashboard */
+.dashboard {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.mt-20 {
+    margin-top: 20px;
+}

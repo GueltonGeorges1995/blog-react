@@ -7,6 +7,8 @@ import NotFound from './NotFound';
 import Login from './Login';
 import Signup from './Signup';
 import Dashboard from './Dashboard';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import { AuthProvider } from '../context/AuthContext';
 
 const App = () => {
@@ -20,23 +22,15 @@ const App = () => {
                             <Route exact path="/">
                                 <Home />
                             </Route>
-                            <Route path="/create">
-                                <Create />
-                            </Route>
+                            <PrivateRoute path="/create" component={Create} />
                             <Route path="/blogs/:id">
                                 <BlogDetails />
                             </Route>
-                            <Route path="/login">
-                                <Login />
-                            </Route>
-                            <Route path="/signup">
-                                <Signup />
-                            </Route>
-                            <Route path="/dashboard">
-                                <Dashboard />
-                            </Route>
+                            <PublicRoute path="/login" component={Login} />
+                            <PublicRoute path="/signup" component={Signup} />
+                            <PrivateRoute path="/dashboard" component={Dashboard} />
                             <Route>
-                                <NotFound path="*" />
+                                <NotFound path="/404" />
                             </Route>
                         </Switch>
                     </div>
